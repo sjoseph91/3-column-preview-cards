@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bg-color-1: hsl(31, 77%, 52%);
+  --bg-color-2: hsl(184, 100%, 22%);
+  --bg-color-3: hsl(179, 100%, 13%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --heading-color: hsl(0, 0%, 95%);
+  --main-font: "Lexend Deca", sans-serif;
+  --header-font: "Big Shoulders Display", cursive;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--heading-color);
+  font-size: 15px;
+}
+.container {
+  margin: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+}
+article {
+  height: 500px;
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+article > h2 {
+  font-family: var(--header-font);
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+article > p {
+  font-family: var(--main-font);
+  color: var(--paragraph-color);
+  line-height: 1.7;
+}
+button {
+  padding: 15px 30px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  align-self: start;
+  border-radius: 25px;
+  background-color: var(--heading-color);
+  font-size: 16px;
+}
+button:hover {
+  box-shadow: 0 8px 16px grey;
+}
+
+#car {
+  background-color: var(--bg-color-1);
+}
+#car > button {
+  color: var(--bg-color-1);
+}
+
+#suv {
+  background-color: var(--bg-color-2);
+}
+#suv > button {
+  color: var(--bg-color-2);
+}
+#luxury {
+  background-color: var(--bg-color-3);
+}
+#luxury > button {
+  color: var(--bg-color-3);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+  }
+}
